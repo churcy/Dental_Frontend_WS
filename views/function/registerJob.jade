@@ -1,0 +1,46 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/function.css')
+
+block content
+    div.topbar
+        div.topbarCtn
+            a.topbarLogo(href='/index')
+            p.topbarWelcome 欢迎使用功夫牙医口腔门诊管理系统
+    div.function
+        div.functionBlock
+            div.functionBlockTt 完善信息
+            div.functionStep
+                div.functionStepItem 1个人信息
+                div.functionStepItem.functionStepItemActive 2职业信息
+                div.functionStepItem 3资格认证
+            div.functionStep.p0.mt20
+                div.functionBlockText(style='width:228px;float:left;margin:0;')
+                    div.kfselect(data-itemmax='5',style='width:190px;float:left;text-align:left;text-indent:15px !important;')
+                        div.kfselectValue 请选择
+                        div.kfselectCtn
+                            div.kfselectItem.textLeft(style='text-indent:15px !important;') 武大口腔
+                div.functionBlockText.textCenter.pointer(style='width:100px;float:right;margin:0;text-indent:0;',onclick='window.location.href="/creatHospital"') 创建医院
+            div.functionError
+                div.functionErrorImg
+                div.functionErrorText 您的手机号填写有误，请重新填写
+            div.functionBlockText
+                div.kfselect(data-itemmax='5',style='width:317px;text-align:left;text-indent:15px !important;')
+                    div.kfselectValue 所属科室
+                    div.kfselectCtn
+                        div.kfselectItem.textLeft(style='text-indent:15px !important') 口腔科
+            div.functionBlockText
+                div.kfselect(data-itemmax='5',style='width:317px;text-align:left;text-indent:15px !important;')
+                    div.kfselectValue 任职职称
+                    div.kfselectCtn
+                        div.kfselectItem.textLeft(style='text-indent:15px !important') 主治医生
+            input.functionBtn.mt20(type='button',value='确认')
+            div.functionLink.textCenter
+                span 暂不填写？
+                a.assistBlue(href='/index') 立即注册
+    include ../common/foot
+    script(src='/js/function/register.js')
+
+
+

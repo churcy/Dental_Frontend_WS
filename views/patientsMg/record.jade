@@ -1,0 +1,55 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/patientsMg.css')
+    script(src='/js/common/patientList.js')
+
+block content
+    include ../common/topbar
+    div.head
+        div.headCtn
+            div.headList
+                a.headListItem(href='/index') 首页
+                a.headListItem.headListItemActive.linear(href='/patientsMg') 患者管理
+                a.headListItem 预约管理
+                a.headListItem 回访管理
+                a.headListItem 日程安排
+            div.headSearch
+                input.headSearchText(placeholder='输入您的搜索关键字')
+                div.headSearchBtn
+    div.info
+        div.position
+            div.positionItem 功夫医生&nbsp;&nbsp;>
+            div.positionItem &nbsp;&nbsp;患者管理&nbsp;&nbsp;>&nbsp;&nbsp;
+            div.positionItem
+        div.date
+    div.work
+        include ../common/friendList
+        div.tab
+            div.tabItem 患者信息
+            div.tabItem.tabItemActive 电子病历
+            div.tabItem 回访记录
+            div.tabItem 预约记录
+        include ../common/filter
+        div.tabList
+            div.tabListCtr
+                div.tabListCtrLeft
+                    div
+                    span
+                div.tabListCtrRight
+                    div.tabListCtrDelete
+                        div.tabListCtrDeleteImg
+                        div.fl 删除
+                    div.tabListCtrEditer
+                        div.tabListCtrEditerImg
+                        div.fl.blue 编辑
+            div.tabListRecord
+
+            div.tabListFoot
+
+
+    include ../common/foot
+    script(src='/js/patientsMg/record.js')
+
+
+

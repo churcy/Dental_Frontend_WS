@@ -1,0 +1,57 @@
+.function{margin:65px 0 340px 0;min-height:10px;color:rgb(203,203,203);}
+.function input{color:rgb(203,203,203);}
+.functionBlock{width:350px;overflow:hidden;margin:0 auto;}
+.functionBlockTt{height:40px;text-align: center;font-size:22px;color:rgb(70,70,70);}
+.functionBlockText{width:348px;height:44px;border:1px solid #e5e5e5;text-indent: 10px;border-radius:5px;margin:10px 0;line-height:44px;}
+.functionBlockText input{height:44px;border:0 none;outline: 0 none;text-indent:0;width:220px;}
+.functionBlockText .btn{cursor:pointer;height:34px;width:100px;float:right;background:rgb(128,205,60);border-radius:5px;text-align: center;line-height: 34px;color:#fff;text-indent: 0;margin:5px;}
+.functionBlockTextError{border:1px solid rgb(255,4,3);}
+.functionBlockText:focus{border:1px solid rgb(172,233,123);}
+.functionError{height:30px;line-height: 30px;color:rgb(255,3,2);display:none;}
+.functionErrorImg{height:30px;width:25px;float:left;background:url(../image/common/error.png) left center no-repeat;}
+.functionLink{height:20px;line-height: 20px;padding:15px 0;}
+.functionLink input{margin:0 5px;}
+.functionBtn{width:350px;height:50px;background:rgb(128,205,60);color:#fff !important;border:0 none;cursor:pointer;border-radius: 10px;font-size:22px;}
+.functionStep{height:50px;line-height:50px;padding:0 15px;}
+.functionStepItem{float:left;width:100px;font-size:18px;margin-right:10px;text-align:center;}
+.functionStepItem:last-child{margin-right:0;}
+.functionStepItemActive{color:rgb(100,100,100);}
+.functionBlockText .kfselect{margin:0 10px;float:left;border:0 none;width:63px;background:url(../image/common/select.png) no-repeat right center;height:44px;line-height:44px;}
+.functionBlockText .kfselectValue{height:44px;}
+.functionBlockText .kfselectCtn{top:45px;border:1px solid #e5e5e5;border-radius:5px;}
+.functionBlockText .kfselectItem{line-height:30px;}
+.functionBlockradio{float:left;width:165px;margin:0;margin-right:15px;cursor:pointer;text-align: center;color:rgb(113,113,113);}
+.functionBlockradioAcitve{border:1px solid rgb(128,205,60);color:rgb(128,205,60);}
+.functionBlockradio:last-child{margin-right:0;}
+.functionStep01{text-align:center;line-height:40px;}
+.permitArea{height:157px;margin-bottom:20px;}
+.permit{width:105px;height:95px;border:1px solid #e5e5e5;float:left;cursor:pointer;padding:30px;}
+.permitTt{height:64px;border-bottom:1px solid #e5e5e5;line-height:25px;font-size:16px;color:rgb(101,101,101);text-align: center;}
+.permitCtn{height:20px;margin-top:10px;line-height:20px;}
+.permitCtnImg{width:40px;height:20px;float:left;background:url(../image/common/add.png) center center no-repeat;}
+.functionPass{height:60px;padding:30px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;margin:10px 0;line-height:30px;}
+.functionPassImg{height:60px;width:60px;float:left;background:url(../image/common/pass.png);margin-right:15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

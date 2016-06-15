@@ -1,0 +1,67 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/patientsMg.css')
+    script(src='/js/common/patientList.js')
+
+block content
+    include ../common/topbar
+    div.head
+        div.headCtn
+            div.headList
+                a.headListItem(href='/index') 首页
+                a.headListItem.headListItemActive.linear(href='/patientsMg') 患者管理
+                a.headListItem 预约管理
+                a.headListItem 回访管理
+                a.headListItem 日程安排
+            div.headSearch
+                input.headSearchText(placeholder='输入您的搜索关键字')
+                div.headSearchBtn
+    div.info
+        div.position
+            div.positionItem 功夫医生&nbsp;&nbsp;>
+            div.positionItem &nbsp;&nbsp;患者管理
+        div.date
+    div.work
+        include ../common/friendList
+        include ../common/filter
+        div.table
+            div.tableTt
+                div.tableNumber 序号
+                div.tableName 姓名
+                div.tableGender 性别
+                div.tableTelephone 联系电话
+                div.tableLast 最近就诊时间
+                div.tableCtr 操作
+            - for(var i=0;i<a.friendList.length;i++)
+                div.tableRow
+                    div.tableNumber="0"+(i+1)
+                    div.tableName(onclick='window.location.href="/patientsMg/info?id='+a.friendList[i].friendUserId+'"')=a.friendList[i].friendName
+                    - if(a.friendList[i].gender == 0)
+                        div.tableGender 男
+                    - if(a.friendList[i].gender == 1)
+                        div.tableGender 女
+                    div.tableTelephone=a.friendList[i].mobile
+                    div.tableLast=a.friendList[i].visitDate
+                    div.tableCtr
+                        div.tableCtrVisit
+                            span 新增就诊
+                            div.img
+                        div.tableCtrOrder
+                            span 新增预约
+                            div.img
+                        div.tableCtrReback
+                            span 新增回访
+                            div.img
+            div.tableRow.tablePos
+                div.tablePosItem 前往
+                div.tablePosInput(contenteditable='true')
+                div.tablePosText 跳转到
+                div.tablePosItem 尾页
+                div.tablePosItem 下一页
+                div.tablePosItem 1
+                div.tablePosItem 上一页
+                div.tablePosItem 首页
+    include ../common/foot
+    script(src='/js/patientsMg/index.js')
+

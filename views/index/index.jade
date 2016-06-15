@@ -1,0 +1,158 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/index.css')
+    script(src='/js/common/patientList.js')
+
+block content
+    include ../common/topbar
+    div.head
+        div.headCtn
+            div.headList
+                a.headListItem.headListItemActive.linear(href='/index') 首页
+                a.headListItem(href='/patientsMg') 患者管理
+                a.headListItem 预约管理
+                a.headListItem 回访管理
+                a.headListItem 日程安排
+            div.headSearch
+                input.headSearchText(placeholder='输入您的搜索关键字')
+                div.headSearchBtn
+    div.info
+        div.position
+            div.positionItem 功夫医生&nbsp;&nbsp;>
+            div.positionItem &nbsp;&nbsp;首页
+        div.date
+    div.work
+        include ../common/friendList
+        div.indexCtn
+            div.indexBlock
+                div.indexBlockLeft
+                    div.indexBlockLeftShdow01
+                    div.indexBlockLeftShdow02
+                    - var len=indexInfo.data.futureReserve.length
+                    - if(len == 0)
+                        div.indexBlockLeftAmount 00
+                    - else if(len < 10)
+                        div.indexBlockLeftAmount=0+len
+                    - else if(len > 99)
+                        div.indexBlockLeftAmount 99+
+                    - else
+                        div.indexBlockLeftAmount=len
+                    div.indexBlockLeftIntro 未来预约
+                div.indexBlockRight
+                    -if(len == 0)
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                    -else
+                        -if(len < 3)
+                            - for(var i=0;i<len;++i)
+                                div.indexBlockRightItem
+                                    div.fl.f16.black=indexInfo.data.futureReserve[i].realName
+                                    div.fl.f16.black=indexInfo.data.futureReserve[i].visitorName
+                                    div.fl 12345413123
+                                    div.fl=indexInfo.data.futureReserve[i].visitTime
+                            - for(var i=0;i<(3-len);++i)
+                                div.indexBlockRightItem
+            div.indexBlock
+                - var len01=indexInfo.data.todayReserve.length
+                div.indexBlockLeft
+                    div.indexBlockLeftShdow01
+                    div.indexBlockLeftShdow02
+                    - if(len01 == 0)
+                        div.indexBlockLeftAmount 00
+                    - else if(len01 < 10)
+                        div.indexBlockLeftAmount=0 + len01
+                    - else if(len01 > 99)
+                        div.indexBlockLeftAmount 99
+                    - else
+                        div.indexBlockLeftAmount=len01
+                    div.indexBlockLeftIntro 今日预约
+                div.indexBlockRight
+                    -if(len01 == 0)
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                    -else
+                        -if(len01 < 3)
+                            - for(var i=0;i<len01;++i)
+                            div.indexBlockRightItem
+                                div.fl.f16.black=indexInfo.data.todayReserve[i].realName
+                                div.fl.f16.black=indexInfo.data.todayReserve[i].visitorName
+                                div.fl 12345413123
+                                div.fl=indexInfo.data.todayReserve[i].visitTime
+                            - for(var i=0;i<(3-len01);++i)
+                                div.indexBlockRightItem
+            div.indexBlock
+                - var len02=indexInfo.data.newPatients.length
+                div.indexBlockLeft
+                    div.indexBlockLeftShdow01
+                    div.indexBlockLeftShdow02
+                    - if(len02 == 0)
+                        div.indexBlockLeftAmount 00
+                    - else if(len02 < 10)
+                        div.indexBlockLeftAmount=0 + len02
+                    - else if(len02 > 99)
+                        div.indexBlockLeftAmount 99
+                    - else
+                        div.indexBlockLeftAmount=len02
+                    div.indexBlockLeftIntro 新增患者
+                div.indexBlockRight
+                    -if(len02 == 0)
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                    -else
+                        -if(len02 < 3)
+                            - for(var i=0;i<len02;++i)
+                                div.indexBlockRightItem
+                                    div.fl.f16.black=indexInfo.data.newPatients[i].realName
+                                    div.fl.f16.black=indexInfo.data.newPatients[i].visitorName
+                                    div.fl 12345413123
+                                    div.fl=indexInfo.data.newPatients[i].visitTime
+                            - for(var i=0;i<(3-len02);++i)
+                                div.indexBlockRightItem
+            div.indexBlock
+                - var len03=indexInfo.data.todayReback.length
+                div.indexBlockLeft
+                    div.indexBlockLeftShdow01
+                    div.indexBlockLeftShdow02
+                    - if(len03 == 0)
+                        div.indexBlockLeftAmount 00
+                    - else if(len03 < 10)
+                        div.indexBlockLeftAmount="0" + len03
+                    - else if(len03 > 99)
+                        div.indexBlockLeftAmount 99
+                    - else
+                        div.indexBlockLeftAmount=len03
+                    div.indexBlockLeftIntro 今日回访
+                div.indexBlockRight
+                    -if(len03 == 0)
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                        div.indexBlockRightItem
+                    -else
+                        -if(len03 < 3)
+                            - for(var i=0;i<len03;++i)
+                                div.indexBlockRightItem
+                                    div.fl.f16.black=indexInfo.data.todayReback[i].realName
+                                    div.fl.f16.black=indexInfo.data.todayReback[i].visitorName
+                                    div.fl 12345413123
+                                    div.fl=indexInfo.data.todayReback[i].visitTime
+                            - for(var i=0;i<(3-len03);++i)
+                                div.indexBlockRightItem
+
+    include ../common/foot
+    script(src='/js/index/index.js')
+
+
+
+
+
+
+
+
+
+
+
+

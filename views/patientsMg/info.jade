@@ -1,0 +1,79 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/patientsMg.css')
+    script(src='/js/common/patientList.js')
+    script(src='/js/common/filter.js')
+
+block content
+    include ../common/topbar
+    div.head
+        div.headCtn
+            div.headList
+                a.headListItem(href='/index') 首页
+                a.headListItem.headListItemActive.linear(href='/patientsMg') 患者管理
+                a.headListItem 预约管理
+                a.headListItem 回访管理
+                a.headListItem 日程安排
+            div.headSearch
+                input.headSearchText(placeholder='输入您的搜索关键字')
+                div.headSearchBtn
+    div.info
+        div.position
+            div.positionItem 功夫医生&nbsp;&nbsp;>
+            div.positionItem &nbsp;&nbsp;患者管理&nbsp;&nbsp;>&nbsp;&nbsp;
+            div.positionItem
+        div.date
+    div.work
+        include ../common/friendList
+        div.tab
+            div.tabItem.tabItemActive 患者信息
+            div.tabItem(onclick='window.location.href="/patientsMg/record?id='+a.userInfo.userId+'&&bookId='+a.userInfo.userId+'"') 电子病历
+            div.tabItem 回访记录
+            div.tabItem 预约记录
+        div.tabList
+            div.tabListCtr
+                div.tabListCtrLeft
+                    div
+                    span
+                div.tabListCtrRight
+                    div.tabListCtrDelete
+                        div.tabListCtrDeleteImg
+                        div.fl 删除
+                    div.tabListCtrEditer(onclick='window.location.href="/patientsMg/infoEditer?id='+a.userInfo.userId+'"')
+                        div.tabListCtrEditerImg
+                        div.fl.blue 编辑
+            div.tabListCtn
+                div.tabListItem
+                    div.tabListItemTt 姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+                    div.tabListItemCtn=a.userInfo.realName
+                div.tabListItem
+                    div.tabListItemTt 性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
+                    - if(a.userInfo.gender == 0)
+                        div.tabListItemCtn 男
+                    - else if(a.userInfo.gender == 1)
+                        div.tabListItemCtn 女
+                div.tabListItem
+                    div.tabListItemTt 生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日：
+                    div.tabListItemCtn=a.userInfo.birthday
+                div.tabListItem
+                    div.tabListItemTt 年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：
+                    div.tabListItemCtn=a.userInfo.age+"岁"
+                div.tabListItem
+                    div.tabListItemTt 病&nbsp;历&nbsp;号：
+                    div.tabListItemCtn=a.userInfo.accountId
+                div.tabListItem
+                    div.tabListItemTt 过&nbsp;敏&nbsp;史：
+                    div.tabListItemCtn=a.userInfo.allergy
+                div.tabListItem
+                    div.tabListItemTt 联系方式：
+                    div.tabListItemCtn=a.userInfo.mobile
+            div.tabListFoot
+                div.tabListFootBlock 新增回访
+                div.tabListFootBlock 新增预约
+                div.tabListFootBlock.tabListFootBlockActive 新增就诊
+
+
+    include ../common/foot
+    script(src='/js/patientsMg/info.js')
+

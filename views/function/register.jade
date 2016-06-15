@@ -1,0 +1,41 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/function.css')
+
+block content
+    div.topbar
+        div.topbarCtn
+            a.topbarLogo(href='/index')
+            p.topbarWelcome 欢迎使用功夫牙医口腔门诊管理系统
+    div.function
+        div.functionBlock
+            div.functionBlockTt 用户注册
+            input.functionBlockText#username(type='text',placeholder='手机号码')
+            div.functionError
+                div.functionErrorImg
+                div.functionErrorText 您的手机号填写有误，请重新填写
+            div.functionBlockText#identifying
+                input(type='text',placeholder='验证码')
+                div.btn 获取验证码
+            div.functionError
+                div.functionErrorImg
+                div.functionErrorText 验证码输入有误
+            input.functionBlockText#password(type='password',placeholder='密码')
+            div.functionError
+                div.functionErrorImg
+                div.functionErrorText 密码错误，请重新填写
+            input.functionBlockText#passwordSure(type='password',placeholder='确认密码')
+            div.functionError
+                div.functionErrorImg
+                div.functionErrorText 密码错误，请重新填写
+            div.functionLink
+                div.fl
+                    input(type='checkbox',)
+                    span 注册代表您已同意
+                    a.protocol(href='javascript:void(0)') 《功夫医生用户协议》
+
+            input.functionBtn(type='button',value='立即注册')
+    include ../common/foot
+    script(src='/js/function/register.js')
+

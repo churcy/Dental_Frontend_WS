@@ -1,0 +1,14 @@
+.indexCtn{width:960px;float:right;}
+.indexBlock{height:263px;width:419px;float:right;margin:30px 0;border-right:1px solid #e5e5e5;padding:0 30px;}
+.indexBlock:nth-child(odd){border:0 none;}
+.indexBlockLeft{width:100px;height:263px;float:left;background:rgb(12,135,238);border-radius:15px;position:relative;}
+.indexBlockLeftShdow01{position:absolute;bottom:0;height:40px;left:0;right:0;background:url(../image/index/shadow01.png);}
+.indexBlockLeftShdow02{position:absolute;bottom:0;height:40px;left:0;right:0;background:url(../image/index/shadow02.png);}
+.indexBlock:first-child .indexBlockLeft{background:rgb(128,250,60);}
+.indexBlockLeftAmount{margin:37px 15px 0 15px;height:80px;line-height:80px;text-align:center;font-size:50px;color:#fff;font-weight: lighter;border-bottom:1px solid rgb(153,215,95);}
+.indexBlockLeftIntro{margin:10px 30px;color:#fff;font-size:20px;}
+.indexBlockRight{width:309px;height:263px;float:right;}
+.indexBlockRightItem{height:60px;float:right;width:309px;border-bottom:1px solid #e5e5e5;padding:13px 0;line-height:30px;}
+.indexBlockRightItem div{width:154px;}
+.indexBlockRightItem:last-child{border:0 none;}
+.indexBlockRightItem div:nth-child(even){text-align: right;}

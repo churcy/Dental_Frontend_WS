@@ -1,0 +1,91 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/patientsMg.css')
+    script(src='/js/common/patientList.js')
+
+block content
+    include ../common/topbar
+    div.head
+        div.headCtn
+            div.headList
+                a.headListItem(href='/index') 首页
+                a.headListItem.headListItemActive.linear(href='/patientsMg') 患者管理
+                a.headListItem 预约管理
+                a.headListItem 回访管理
+                a.headListItem 日程安排
+            div.headSearch
+                input.headSearchText(placeholder='输入您的搜索关键字')
+                div.headSearchBtn
+    div.info
+        div.position
+            div.positionItem 功夫医生&nbsp;&nbsp;>
+            div.positionItem &nbsp;&nbsp;患者管理&nbsp;&nbsp;>&nbsp;&nbsp;
+            div.positionItem=a.userInfo.realName
+        div.date
+    div.work
+        include ../common/friendList
+        div.tab
+            div.tabItem.tabItemActive 患者信息
+            div.tabItem 电子病历
+            div.tabItem 回访记录
+            div.tabItem 预约记录
+        div.tabList
+            div.tabListCtr
+                div.tabListCtrLeft
+                    div
+                    span 基本信息
+            div.tabListCtn
+                div.tabListItem
+                    div.tabListItemTt
+                        span.red *
+                        span 姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+                    input.tabListText(type='text',value=a.userInfo.realName)
+                div.tabListItem
+                    div.tabListItemTt 性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
+                    div.tabListText.tabListradio 男
+                    div.tabListText.tabListradio 女
+                div.tabListItem
+                    div.tabListItemTt 生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日：
+                    div.tabListItemCtn
+                        div.tabListText.tabListTextDate
+                            div.kfselect(data-itemmax='5')
+                                div.kfselectValue 请选择
+                                div.kfselectCtn
+                                    - for(var i=2016;i>1940;i--)
+                                        div.kfselectItem=i
+                        div.fl.ml5.mr5 年
+                        div.tabListText.tabListTextDate
+                            div.kfselect(data-itemmax='5')
+                                div.kfselectValue 请选择
+                                div.kfselectCtn
+                                    - for(var i=1;i<13;i++)
+                                        div.kfselectItem=i
+                        div.fl.ml5.mr5 月
+                        div.tabListText.tabListTextDate
+                            div.kfselect(data-itemmax='5')
+                                div.kfselectValue 请选择
+                                div.kfselectCtn
+                                    - for(var i=1;i<32;i++)
+                                        div.kfselectItem=i
+                        div.fl.ml5.mr5 日
+                div.tabListItem
+                    div.tabListItemTt 年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：
+                    input.tabListText(type='text',value=a.userInfo.age)
+                div.tabListItem
+                    div.tabListItemTt 病&nbsp;历&nbsp;号：
+                    input.tabListText(type='text',value=a.userInfo.accountId)
+                div.tabListItem
+                    div.tabListItemTt 过&nbsp;敏&nbsp;史：
+                    input.tabListText(type='text',value=a.userInfo.allergy)
+                div.tabListItem
+                    div.tabListItemTt 联系方式：
+                    input.tabListText(type='text',value=a.userInfo.mobile)
+            div.tabListFoot
+                div.tabListFootBlock.tabListFootBlockActive 确定
+                div.tabListFootBlock 取消
+
+
+    include ../common/foot
+    script(src='/js/patientsMg/infoEditer.js')
+

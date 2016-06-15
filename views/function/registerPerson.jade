@@ -1,0 +1,50 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/function.css')
+
+block content
+    div.topbar
+        div.topbarCtn
+            a.topbarLogo(href='/index')
+            p.topbarWelcome 欢迎使用功夫牙医口腔门诊管理系统
+    div.function
+        div.functionBlock
+            div.functionBlockTt 完善信息
+            div.functionStep
+                div.functionStepItem.functionStepItemActive 1个人信息
+                div.functionStepItem 2职业信息
+                div.functionStepItem 3资格认证
+            input.functionBlockText#username(type='text',placeholder='姓名')
+            div.functionError
+                div.functionErrorImg
+                div.functionErrorText 您的手机号填写有误，请重新填写
+            div.functionBlockText
+                div.kfselect(data-itemmax='5')
+                    div.kfselectValue 请选择
+                    div.kfselectCtn
+                        - for(var i=2016;i>1940;i--)
+                            div.kfselectItem=i
+                div.fl 年
+                div.kfselect(data-itemmax='5')
+                    div.kfselectValue 请选择
+                    div.kfselectCtn
+                        - for(var i=1;i<13;i++)
+                            div.kfselectItem=i
+                div.fl 月
+                div.kfselect(data-itemmax='5')
+                    div.kfselectValue 请选择
+                    div.kfselectCtn
+                        - for(var i=1;i<32;i++)
+                            div.kfselectItem=i
+                div.fl 日
+            div.functionStep.p0.mt20
+                div.functionBlockText.functionBlockradio.functionBlockradioAcitve 男
+                div.functionBlockText.functionBlockradio 女
+
+            input.functionBtn.mt20(type='button',value='确认')
+    include ../common/foot
+    script(src='/js/function/register.js')
+
+
+

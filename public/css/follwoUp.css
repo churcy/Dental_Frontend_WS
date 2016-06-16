@@ -1,0 +1,35 @@
+.work .returnVisitList{overflow:hidden;width:1000px;float:left;}
+.work .returnVisitList .returnVisitList_tt{height:60px;line-height:60px;width: 940px;margin:0 30px;border-bottom:1px solid rgb(232,232,232);font-size:}
+.work .returnVisitList .returnVisitList_tt div{float:left;text-align:center;color:#666;font-weight:bold;}
+.work .returnVisitList .row div{float:left;text-align:center;font-weight: normal;}
+.work .returnVisitList  .item01{width:60px;}
+.work .returnVisitList  .item02{width:150px;}
+.work .returnVisitList  .item03{width:82px;}
+.work .returnVisitList  .item04{width:166px;}
+.work .returnVisitList  .item05{width:144px;}
+.work .returnVisitList  .item06{width:126px;}
+.work .returnVisitList  .item07{width:135px;}
+.work .returnVisitList  .item08{width:77px;}
+.item08Bnt{float:left;display:inline-block;background: url("../image/apptMg/yygl_bnta.jpg") no-repeat 0 0;margin:14px 0 0 23px;width: 32px;height:32px;}
+.item08Bnt:hover{background: url("../image/apptMg/yygl_bntahov.jpg") no-repeat 0 0;}
+.riqiBox{width:940px;height:330px;float:left;padding:30px;background-color: #fdfdfd;border-bottom:#e5e5e5 1px solid;}
+.work1{height:1133px;}
+.work1 .friendList{height: 1133px;}
+
+/* 日期系统 */
+.calendar{width:800px;height:265px;border:1px solid rgb(95,221,222);padding:7px;background-color:#fff;right:10px;top:4px;float:left;}
+.calendar .calendar_ctr{height:30px;}
+.calendar .calendar_ctr .years{width:76px;float:left;margin-right:10px;}
+.calendar .calendar_ctr .month_reduce{width:20px;height:20px;float:left;border:1px solid rgb(181,181,181);text-align:center;cursor:pointer;}
+.calendar .calendar_ctr .month{width:54px;float:left;}
+.calendar .calendar_ctr .month_add{width:20px;height:20px;float:left;border:1px solid rgb(181,181,181);text-align:center;margin-right:10px;cursor:pointer;}
+.calendar .calendar_ctr .vacation{width:74px;float:left;}
+.calendar .calendar_ctr .today{float:right;width:56px;height:20px;border:1px solid rgb(229,122,122);font-size:12px;text-align:center;line-height:20px;cursor:pointer;}
+.calendar .calendar_ctn{border-top:2px solid rgb(95,221,222);}
+.calendar .calendar_ctn .week{height:20px;}
+.calendar .calendar_ctn .week .item{width:14.28%;height:20px;float:left;text-align:center;font-size:12px;}
+.calendar .calendar_ctn .detail{width:100%;overflow:hidden;}
+.calendar .calendar_ctn .detail .item{width:14.28%;height:43px;float:left;border-top:1px solid rgb(224,220,220);line-height:28px;text-align:center;cursor:pointer;}
+.calendar .calendar_ctn .detail .other{opacity:0.6;filter:alpha(opacity=60);}
+.calendar .calendar_ctn .detail .check{background:rgb(95,221,222);color:#fff;}
+.flex_btn{display:none;width:22px;height:36px;float:left;background:rgb(233,234,234);text-align:center;line-height:36px;cursor:pointer;position:absolute;top:320px;left:50%;margin-left:250px;}

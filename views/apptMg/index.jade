@@ -1,0 +1,225 @@
+extends ../common
+
+block extraHead
+    link(rel='stylesheet', href='/css/apptMg.css')
+    script(src='/js/common/patientList.js')
+
+block content
+    include ../common/topbar
+    div.head
+        div.headCtn
+            div.headList
+                a.headListItem(href='/index') 首页
+                a.headListItem(href='/patientsMg') 患者管理
+                a.headListItem.headListItemActive.linear(href='/apptMg') 预约管理
+                a.headListItem(href='/follwoUpMg') 回访管理
+                a.headListItem(href='/schedule') 日程安排
+            div.headSearch
+                input.headSearchText(placeholder='输入您的搜索关键字')
+                div.headSearchBtn
+    div.info
+        div.position
+            div.positionItem 功夫医生&nbsp;&nbsp;>
+            div.positionItem &nbsp;&nbsp;预约管理
+        div.date
+    div.work.work1
+        include ../common/friendList
+        div.riqiBox
+            div.calendar
+                div.calendar_ctr
+                    div.kfselect.years(data-itemMax=5,data-wt=76)
+                        div.kfselectValue
+                        div.kfselectCtn
+                            div.kfselectItem 2015年
+                            div.kfselectItem 2016年
+                            div.kfselectItem 2017年
+                            div.kfselectItem 2018年
+                    div.month_reduce  <
+                    div.kfselect.month(data-itemMax=5,data-wt=54)
+                        div.kfselectValue
+                        div.kfselectCtn
+                            div.kfselectItem 12月
+                            div.kfselectItem 11月
+                            div.kfselectItem 10月
+                            div.kfselectItem 9月
+                            div.kfselectItem 8月
+                            div.kfselectItem 7月
+                            div.kfselectItem 6月
+                            div.kfselectItem 5月
+                            div.kfselectItem 4月
+                            div.kfselectItem 3月
+                            div.kfselectItem 2月
+                            div.kfselectItem 1月
+                    div.month_add  >
+
+                    div.today 返回今天
+                div.calendar_ctn
+                    div.week
+                        div.item 一
+                        div.item 二
+                        div.item 三
+                        div.item 四
+                        div.item 五
+                        div.item 六
+                        div.item 日
+                    div.detail
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+                        div.item
+        div.returnVisitList
+            div.returnVisitList_tt
+                div.item01 序号
+                div.item02 姓名
+                div.item03 性别
+                div.item04 联系电话
+                div.item05 预约时间
+                div.item06 预约类型
+                div.item07 跟进医师
+                div.item08 操作
+            div.returnVisitList_tt.row
+                div.item01 01
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 02
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 03
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 04
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 05
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 06
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 07
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 08
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 09
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.returnVisitList_tt.row
+                div.item01 10
+                div.item02 金枝妈妈
+                div.item03 女
+                div.item04 1388777890
+                div.item05 2016-05-20
+                div.item06 洁牙
+                div.item07 陈医师
+                div.item08
+                    a.item08Bnt
+            div.tableRow.tablePos(style="margin-right:30px;")
+                div.tablePosItem 前往
+                div.tablePosInput(contenteditable='true')
+                div.tablePosText 跳转到
+                div.tablePosItem 尾页
+                div.tablePosItem 下一页
+                div.tablePosItem 1
+                div.tablePosItem 上一页
+                div.tablePosItem 首页
+
+    include ../common/foot
+
+    script(src='/javascripts/calendar.js')
+
+

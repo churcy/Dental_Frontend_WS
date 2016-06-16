@@ -2,7 +2,7 @@ extends ../common
 
 block extraHead
     link(rel='stylesheet', href='/css/patientsMg.css')
-    script(src='/js/common/patientList.js')
+    script(src='/javascripts/common/patientList.js')
 
 block content
     include ../common/topbar
@@ -11,9 +11,9 @@ block content
             div.headList
                 a.headListItem(href='/index') 首页
                 a.headListItem.headListItemActive.linear(href='/patientsMg') 患者管理
-                a.headListItem 预约管理
-                a.headListItem 回访管理
-                a.headListItem 日程安排
+                a.headListItem(href='/apptMg') 预约管理
+                a.headListItem(href='/follwoUpMg') 回访管理
+                a.headListItem(href='/scheduleMg') 日程安排
             div.headSearch
                 input.headSearchText(placeholder='输入您的搜索关键字')
                 div.headSearchBtn
@@ -63,5 +63,5 @@ block content
                 div.tablePosItem 上一页
                 div.tablePosItem 首页
     include ../common/foot
-    script(src='/js/patientsMg/index.js')
+    script(src='/javascripts/patientsMg/index.js')
 

@@ -1,3 +1,25 @@
 $(function(){
     tools.kfselect();
 });
+$(function(){
+    $("#textFz").on("click",function(){
+        $(".shadow,.writeReport1").show();
+    });
+    $("#closeBnt1,#querenBnt1").on("click",function(){
+        $(".shadow,.writeReport1").hide();
+    });
+    $("#deleteBnt").on("click",function(){
+        $(".shadow,.writeReport2").show();
+        $(".writeReport1").hide();
+    });
+    $("#closeBnt2,#querenBnt2").on("click",function(){
+        $(".shadow,.writeReport2").hide();
+    });
+    $("#addBnt").on("click",function(){
+        $(".shadow,.writeReport3").show();
+        $(".writeReport1").hide();
+    });
+    $("#closeBnt3,#querenBnt3").on("click",function(){
+        $(".shadow,.writeReport3").hide();
+    });
+})

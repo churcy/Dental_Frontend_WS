@@ -4,7 +4,7 @@ fieldset,img{border:0;}
 li{list-style-type: none;}
 a{text-decoration: none;}
 input , textarea ， select{outline:0 none;}
-body{font-size:14px;font-family:Microsoft YaHei;color:rgb(143,143,143);}
+body{font-size:14px;font-family:Microsoft YaHei;color:rgb(143,143,143);position:relative;z-index: 1;}
 
 /* topbar */
 .topbar{height:60px;background:url(../image/topbar/topBg.jpg) center center}

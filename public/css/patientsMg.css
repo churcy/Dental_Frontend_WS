@@ -1,0 +1,49 @@
+/*电子病历*/
+.work{margin-bottom:230px;}
+.tabListRecord{float:left;border-bottom: 1px solid #e5e5e5;margin-top: 22px;height:420px;width: 939px;overflow: hidden;overflow-y: scroll; }
+.tabListCtrLeft span{color:#333;margin-right: 25px;}
+.tabListRecord_item{width: 919px;float:left;margin-bottom: 12px;padding: 7px 0;}
+.tabListRecord_item_tt{width:70px;float:left;line-height:24px;colot:#9f9f9f;;margin-right:20px;}
+.tabListRecord_item_tt1{line-height:64px;}
+.tabListRecord_item_input{width:829px;float:left;line-height:24px;color:#666;}
+.tabListRecord_item_input_img{width:97px;height:64px;float:left;}
+.tabListRecord_item_input_img_lt{width:47px;float:left;border-right:1px solid rgb(148,147,147);border-bottom:1px solid rgb(148,147,147);height:31px;line-height:31px;}
+.tabListRecord_item_input_img_rt{width:49px;float:left;border-bottom:1px solid rgb(148,147,147);height:31px;line-height:31px;}
+.tabListRecord_item_input_img_lb{width:47px;float:left;border-right:1px solid rgb(148,147,147);height:32px;line-height:32px;}
+.tabListRecord_item_input_img_rb{width:49px;float:left;height:32px;line-height:32px;}
+.tabListRecord_item_input_input{width:690px;float:left;margin-left:42px;line-height:24px;color:#444;}
+.tabListFootBlock1{padding:0 10px;float:left;font-size:20px}
+
+
+/*编辑个人资料*/
+.tabListSelect{position:relative;z-index: 1;}
+.kfselect{background: url(../image/common/select.png) no-repeat 312px center;}
+.textLeft{border-bottom: #eaeaea 1px dashed;}
+.textLeft:last-child{border-bottom:none;}
+.kfselectCtndSelect{width:100%;}
+.kfselectCtnBox{display: none;}
+#textFz{border-top: #eaeaea 1px dashed;}
+.writeReport1{width:404px;height:348px;margin:-174px 0 0 -232px;}
+.writeReport1 .modelHd,.writeReport3 .modelHd{height:60px;border-bottom:none;}
+.writeReport1 .modelHd .modelHdTitle,.writeReport3 .modelHd .modelHdTitle{line-height:60px;}
+.writeReport1 .modelHd .addFz{float:right;line-height:60px;color:#006bc4;}
+.modelBottom{width:100%;height:36px;margin-top:20px;float:left;}
+.modelCenter{width: 402px;height:202px;overflow:hidden;overflow-y:scroll;border:#e5e5e5 1px solid;}
+.modelCenterLi{width:338px;margin-left:30px;border-bottom:#eaeaea 1px dashed;height:50px;line-height:50px; }
+.modelCenterLi span{display:inline-block;float:left;}
+.modelCenterLi span em{margin-left:5px;font-style:normal;}
+.modelCenterLi .modelCenterLiSpan1{width:214px;}
+.modelCenterLi .modelCenterLiSpan2,.modelCenterLi .modelCenterLiSpan3{width:45px;text-align:center;}
+.modelCenterLi .modelCenterLiSpan4{width:34px;text-align:center;}
+.writeReport2{width:404px;height:158px;margin:-79px 0 0 -232px;}
+.modelCenter1{margin:21px 0 0;float:left;width:344px;padding:0 0 23px 56px;background:url("../image/patientsMg/sctsBg.jpg") no-repeat 0 0;height:36px;line-height:36px;font-size:16px;color:#444;border-bottom:#e5e5e5 1px solid;}
+.writeReport3{width:404px;height:178px;margin:-89px 0 0 -232px;}
+.modelcenter3{width: 404px;height:42px;line-height:42px;float:left;overflow:hidden;}
+.modelcenter3 span{width:93px;display:inline-block;float:left;font-size:16px;color:#666;}
+.modelcenter3 input{width:307px;border:#e5e5e5 1px solid;border-radius:5px;float:left;text-indent:15px;height:40px;display:inline-block;line-height:40px;}
+
+
+
+
+
+

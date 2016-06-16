@@ -24,8 +24,10 @@ var login={
                         var a = eval('(' + data + ')');
                         $(".functionBlockText").removeClass("functionBlockTextError").next().hide();
                         if(a.status == "02008"){
+                            $("#username").addClass("functionBlockTextError").next().show();
                             $("#password").addClass("functionBlockTextError").next().show();
                         }else if(a.status == "02009"){
+                            $("#username").addClass("functionBlockTextError").next().show();
                             $("#password").addClass("functionBlockTextError").next().show();
                         }else if(a.status == "000"){
                             if(!a.doctorId){
